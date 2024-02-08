@@ -1,4 +1,5 @@
 @use 'utils/index' as *;
+@use 'components/index' as *;
 
 * {
     padding: 0;
@@ -7,4 +8,27 @@
     box-sizing: border-box;
 
     font-family: $mainFont;
+}
+
+html {
+    font-size: 62.5%;
+}
+
+body {
+    width: 100%;
+    min-height: 100vh;
+    // position: relative;
+
+    display: flex;
+    flex-flow: column nowrap;
+}
+
+footer {
+    width: 100%;
+    text-align: center;
+    padding: 20px;
+}
+
+a {
+    text-decoration: none;
 }

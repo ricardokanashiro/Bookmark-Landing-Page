@@ -1,0 +1,28 @@
+@use '../utils/index' as *;
+
+header {
+    padding: 4rem $horizontalPadding;
+
+    @include flex(space-between, center);
+}
+
+.header__menu {
+    display: flex;
+    gap: 1rem;
+}
+
+.menu__item {
+    font-size: 1.3rem;
+    width: 10rem;
+    padding: 1.2rem;
+    text-align: center;
+    color: $grayishBlue;
+}
+
+.menu__item--btn {
+    background-color: $softRed;
+    color: white;
+    border-radius: .5rem;
+    margin-left: 1.5rem;
+    cursor: pointer;
+}
