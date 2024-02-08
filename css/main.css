@@ -1,20 +1,25 @@
 @import url("https://fonts.googleapis.com/css2?family=Rubik:wght@400;500&display=swap");
 header {
-  padding: 4rem 14rem;
+  padding: 4rem 10vw;
   display: flex;
   justify-content: space-between;
   align-items: center;
 }
 
+header img {
+  width: clamp(12rem, 7rem + 6vw, 17rem);
+  font-size: 1vw;
+}
+
 .header__menu {
   display: flex;
-  gap: 1rem;
+  gap: clamp(0.4rem, 0.4vw, 1rem);
 }
 
 .menu__item {
-  font-size: 1.3rem;
-  width: 10rem;
-  padding: 1.2rem;
+  font-size: clamp(0.8rem, 0.6rem + 0.5vw, 1.5rem);
+  width: clamp(8rem, 9vw, 12rem);
+  padding: 1.2rem 0;
   text-align: center;
   color: hsl(229, 8%, 60%);
 }
@@ -27,6 +32,30 @@ header {
   cursor: pointer;
 }
 
+.header__hamburger-btn {
+  cursor: pointer;
+  display: none;
+  flex-flow: column nowrap;
+  gap: 0.4rem;
+}
+
+.hamburger-btn__row {
+  width: 3rem;
+  height: 0.4rem;
+  background-color: black;
+  border-radius: 0.2rem;
+}
+
+@media (max-width: 700px) {
+  .header__menu {
+    display: none;
+  }
+  .header__hamburger-btn {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+  }
+}
 * {
   padding: 0;
   margin: 0;

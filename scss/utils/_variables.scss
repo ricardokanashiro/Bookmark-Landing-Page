@@ -1,3 +1,5 @@
+@use 'breakpoints' as *;
+
 @import url('https://fonts.googleapis.com/css2?family=Rubik:wght@400;500&display=swap');
 
 $mainFont: 'Rubik', sans-serif;
@@ -7,4 +9,4 @@ $softRed: hsl(0, 94%, 66%);
 $grayishBlue: hsl(229, 8%, 60%);
 $veryDarkBlue: hsl(229, 31%, 21%);
 
-$horizontalPadding: 14rem;
+$horizontalPadding: calc(10vw);

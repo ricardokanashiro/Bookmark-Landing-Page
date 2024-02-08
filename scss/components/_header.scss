@@ -6,15 +6,20 @@ header {
     @include flex(space-between, center);
 }
 
+header img {
+    width: clamp(12rem, 7rem + 6vw, 17rem);
+    font-size: 1vw;
+}
+
 .header__menu {
     display: flex;
-    gap: 1rem;
+    gap: clamp(.4rem, .4vw, 1rem);
 }
 
 .menu__item {
-    font-size: 1.3rem;
-    width: 10rem;
-    padding: 1.2rem;
+    font-size: clamp(.8rem, .6rem + .5vw, 1.5rem);
+    width: clamp(8rem, 9vw ,12rem);
+    padding: 1.2rem 0;
     text-align: center;
     color: $grayishBlue;
 }
@@ -25,4 +30,29 @@ header {
     border-radius: .5rem;
     margin-left: 1.5rem;
     cursor: pointer;
+}
+
+.header__hamburger-btn {
+    cursor: pointer;
+
+    display: none;
+    flex-flow: column nowrap;
+    gap: .4rem;
+}
+
+.hamburger-btn__row {
+    width: 3rem;
+    height: .4rem;
+    background-color: black;
+    border-radius: .2rem;
+}
+
+@include tabletScreenDown {
+    .header__menu {
+        display: none;
+    }
+
+    .header__hamburger-btn {
+        @include flex(center, center);
+    }
 }
