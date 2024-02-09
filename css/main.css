@@ -56,6 +56,70 @@ header img {
     align-items: center;
   }
 }
+.introduction {
+  width: 100%;
+  padding: 6rem 0 0 10vw;
+  margin-bottom: 10rem;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 2rem;
+}
+
+.introduction__content {
+  width: 45%;
+}
+.introduction__content h1 {
+  font-weight: 500;
+  font-size: clamp(2rem, 1.5rem + 2.5vw, 5rem);
+}
+.introduction__content p {
+  font-size: clamp(1rem, 1rem + 0.55vw, 2rem);
+  color: hsl(229, 8%, 60%);
+  margin-top: 4rem;
+  line-height: 2.8rem;
+}
+.introduction__content .introduction__content__btn-wrapper {
+  margin-top: 4rem;
+  display: flex;
+  justify-content: flex-start;
+  align-items: center;
+  gap: 1.4rem;
+}
+
+.introduction__illustration {
+  flex-shrink: 0;
+  width: clamp(40rem, 50%, 80rem);
+  position: relative;
+}
+.introduction__illustration img {
+  width: 90%;
+  position: relative;
+  z-index: 1;
+  margin-right: 10%;
+}
+
+.illustration__detail {
+  display: flex;
+  justify-content: flex-end;
+  position: absolute;
+  bottom: -20%;
+  right: 0;
+  width: 90%;
+  height: 85%;
+}
+.illustration__detail .detail__circle {
+  width: 50%;
+  height: 100%;
+  border-radius: 50% 0 0 50%;
+  background-color: hsl(231, 69%, 60%);
+}
+.illustration__detail .detail__rectangle {
+  width: 30%;
+  height: 100%;
+  background-color: hsl(231, 69%, 60%);
+}
+
 * {
   padding: 0;
   margin: 0;
@@ -83,6 +147,36 @@ footer {
 
 a {
   text-decoration: none;
+}
+
+.primary-button {
+  background-color: hsl(231, 69%, 60%);
+  color: white;
+  padding: 1.25rem 1.6rem;
+  border-radius: 0.4rem;
+  cursor: pointer;
+  border: 0.25rem solid hsl(231, 69%, 60%);
+  font-weight: 500;
+  font-size: 1.4rem;
+  transition-property: color, background-color;
+  transition-duration: 300ms;
+}
+
+.primary-button:hover {
+  background-color: transparent;
+  color: hsl(231, 69%, 60%);
+}
+
+.primary-button--gray {
+  background-color: hsl(240, 7%, 94%);
+  color: hsl(229, 31%, 21%);
+  border: 0.25rem solid hsl(240, 7%, 94%);
+}
+
+.primary-button--gray:hover {
+  background-color: transparent;
+  border: 0.25rem solid hsl(229, 8%, 60%);
+  color: hsl(229, 31%, 21%);
 }
 
 /*# sourceMappingURL=main.css.map */

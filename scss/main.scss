@@ -1,5 +1,6 @@
 @use 'utils/index' as *;
 @use 'components/index' as *;
+@use 'components/introduction' as *;
 
 * {
     padding: 0;
@@ -31,4 +32,35 @@ footer {
 
 a {
     text-decoration: none;
+}
+
+.primary-button {
+    background-color: $softBlue;
+    color: white;
+    padding: 1.25rem 1.6rem;
+    border-radius: .4rem;
+    cursor: pointer;
+    border: .25rem solid $softBlue;
+    font-weight: 500;
+    font-size: 1.4rem;
+
+    transition-property: color, background-color;
+    transition-duration: 300ms;
+}
+
+.primary-button:hover {
+    background-color: transparent;
+    color: $softBlue;
+}
+
+.primary-button--gray {
+    background-color: hsl(240, 7%, 94%);
+    color: $veryDarkBlue;
+    border: .25rem solid hsl(240, 7%, 94%);
+}
+
+.primary-button--gray:hover {
+    background-color: transparent;
+    border: .25rem solid $grayishBlue;
+    color: $veryDarkBlue; 
 }

@@ -1,0 +1,73 @@
+@use '../utils/index' as *;
+
+.introduction {
+    width: 100%;
+    padding: 6rem 0 0 $horizontalPadding;
+    margin-bottom: 10rem;
+    
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    gap: 2rem;
+}
+
+.introduction__content {
+    width: 45%;
+
+    h1 {
+        font-weight: 500;
+        font-size: clamp(2rem, 1.5rem + 2.5vw, 5rem);
+    }
+
+    p {
+        font-size: clamp(1rem, 1rem + .55vw, 2rem);
+        color: $grayishBlue;
+        margin-top: 4rem;
+        line-height: 2.8rem;
+    }
+
+    .introduction__content__btn-wrapper {
+        margin-top: 4rem;
+
+        @include flex(flex-start, center);
+        gap: 1.4rem;
+    }
+}
+
+.introduction__illustration {
+    flex-shrink: 0;
+    width: clamp(40rem, 50%, 80rem);
+    position: relative;
+
+    img {
+        width: 90%;
+        position: relative;
+        z-index: 1;
+        margin-right: 10%;
+    }
+}
+
+.illustration__detail {
+    display: flex;
+    justify-content: flex-end;
+
+    position: absolute;
+    bottom: -20%;
+    right: 0;
+
+    width: 90%;
+    height: 85%;
+
+    .detail__circle {
+        width: 50%;
+        height: 100%;
+        border-radius: 50% 0 0 50%;
+        background-color: $softBlue;
+    }
+
+    .detail__rectangle {
+        width: 30%;
+        height: 100%;
+        background-color: $softBlue;
+    }
+}
