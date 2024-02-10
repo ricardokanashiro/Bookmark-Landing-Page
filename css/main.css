@@ -145,12 +145,11 @@ header img {
 }
 .features {
   width: 100%;
-  margin-top: 20rem;
+  margin-top: 15rem;
 }
 
 .features__introduction-text {
   width: 100%;
-  margin-top: 4rem;
   display: flex;
   justify-content: center;
   align-items: center;
@@ -163,7 +162,7 @@ header img {
 }
 .features__introduction-text p {
   width: min(50rem, 80%);
-  margin-top: calc(1.8rem + 1.7vw);
+  margin-top: calc(0.6rem + 1.5vw);
   text-align: center;
   font-size: calc(1rem + 0.4vw);
   line-height: calc(1.5rem + 0.9vw);
@@ -172,7 +171,7 @@ header img {
 
 .features__slider {
   width: 100%;
-  margin-top: 7rem;
+  margin-top: calc(2rem + 2.3vw);
   display: flex;
   justify-content: center;
   align-items: center;
@@ -208,7 +207,7 @@ header img {
 .slider__slides {
   min-width: 100%;
   max-width: 100%;
-  margin-top: 7rem;
+  margin-top: 2rem;
   display: flex;
 }
 
