@@ -1,0 +1,106 @@
+@use '../utils/index' as *;
+
+.download {
+    margin-top: 10rem;
+}
+
+.download__introduction-text {
+    @include flex(center, center);
+    flex-flow: column nowrap;
+
+    h2 {
+        text-align: center;
+        font-size: calc(1.8rem + 1.1vw);
+        font-weight: 500;
+    }
+
+    p {
+        width: min(50rem, 80%);
+        margin-top: calc(.6rem + 1.5vw);
+
+        text-align: center;
+        font-size: calc(1rem + .4vw);
+        line-height: calc(1.5rem + .9vw);
+        color: $grayishBlue;
+    }
+}
+
+.download__browsers-wrapper {
+    margin-top: 7rem;
+
+    @include flex(center, center);
+    gap: 3rem;
+}
+
+.browsers-wrapper__browser-card {
+    @include flex(center, center);
+    flex-flow: column nowrap;
+
+    box-shadow: 0 0 10px .5px rgba(0, 0, 0, 0.1);
+    border-radius: .8rem;
+}
+
+.browsers-wrapper__browser-card:nth-child(1) {
+    margin-bottom: 7rem;
+}
+
+.browsers-wrapper__browser-card:nth-child(3) {
+    margin-top: 7rem;
+}
+
+.browser-card__browser-content {
+    padding: 5rem 2rem 3rem 2rem;
+
+    @include flex(center, center);
+    flex-flow: column nowrap;
+
+    img, h3, p {
+        display: block;
+    }
+
+    h3 {
+        font-size: 1.8rem;
+        font-weight: 500;
+        margin-top: 3rem;
+    }
+
+    p {
+        color: $grayishBlue;
+        font-size: 1.3rem;
+        margin-top: 1.2rem;
+    }
+
+    img {
+        width: 7rem;
+    }
+}
+
+.browser-card__divider {
+    width: 100%;
+
+    @include flex(center, center);
+    gap: 1rem;
+
+    overflow: hidden;
+    position: absolute;
+    top: -2px;
+    left: 0;
+
+    .divider__dot {
+        flex-shrink: 0;
+        width: 2px;
+        height: 2px;
+        border-radius: 50%;
+        background-color: $grayishBlue;
+    }
+}
+
+.browser-card__browser-download-btn {
+    padding: 2rem;
+    position: relative;
+    margin-top: 1rem;
+
+    button {
+        padding: 1.2rem 3rem;
+    }
+}

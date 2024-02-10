@@ -207,7 +207,7 @@ header img {
 .slider__slides {
   min-width: 100%;
   max-width: 100%;
-  margin-top: 7rem;
+  margin-top: 5rem;
   display: flex;
 }
 
@@ -298,6 +298,9 @@ header img {
 }
 
 @media (max-width: 700px) {
+  .features {
+    margin-top: 10rem;
+  }
   .slider__menu {
     width: min(80%, 35rem);
     display: flex;
@@ -338,6 +341,107 @@ header img {
     width: 110%;
   }
 }
+.download {
+  margin-top: 10rem;
+}
+
+.download__introduction-text {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-flow: column nowrap;
+}
+.download__introduction-text h2 {
+  text-align: center;
+  font-size: calc(1.8rem + 1.1vw);
+  font-weight: 500;
+}
+.download__introduction-text p {
+  width: min(50rem, 80%);
+  margin-top: calc(0.6rem + 1.5vw);
+  text-align: center;
+  font-size: calc(1rem + 0.4vw);
+  line-height: calc(1.5rem + 0.9vw);
+  color: hsl(229, 8%, 60%);
+}
+
+.download__browsers-wrapper {
+  margin-top: 7rem;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 3rem;
+}
+
+.browsers-wrapper__browser-card {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-flow: column nowrap;
+  box-shadow: 0 0 10px 0.5px rgba(0, 0, 0, 0.1);
+  border-radius: 0.8rem;
+}
+
+.browsers-wrapper__browser-card:nth-child(1) {
+  margin-bottom: 7rem;
+}
+
+.browsers-wrapper__browser-card:nth-child(3) {
+  margin-top: 7rem;
+}
+
+.browser-card__browser-content {
+  padding: 5rem 2rem 3rem 2rem;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-flow: column nowrap;
+}
+.browser-card__browser-content img, .browser-card__browser-content h3, .browser-card__browser-content p {
+  display: block;
+}
+.browser-card__browser-content h3 {
+  font-size: 1.8rem;
+  font-weight: 500;
+  margin-top: 3rem;
+}
+.browser-card__browser-content p {
+  color: hsl(229, 8%, 60%);
+  font-size: 1.3rem;
+  margin-top: 1.2rem;
+}
+.browser-card__browser-content img {
+  width: 7rem;
+}
+
+.browser-card__divider {
+  width: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 1rem;
+  overflow: hidden;
+  position: absolute;
+  top: -2px;
+  left: 0;
+}
+.browser-card__divider .divider__dot {
+  flex-shrink: 0;
+  width: 2px;
+  height: 2px;
+  border-radius: 50%;
+  background-color: hsl(229, 8%, 60%);
+}
+
+.browser-card__browser-download-btn {
+  padding: 2rem;
+  position: relative;
+  margin-top: 1rem;
+}
+.browser-card__browser-download-btn button {
+  padding: 1.2rem 3rem;
+}
+
 * {
   padding: 0;
   margin: 0;

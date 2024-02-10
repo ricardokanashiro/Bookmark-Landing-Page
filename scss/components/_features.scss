@@ -70,9 +70,9 @@
 .slider__slides {
     min-width: 100%;
     max-width: 100%;
-    margin-top: 7rem;
+    margin-top: 5rem;
 
-    // transform: translateX(-100vw);
+    // transform: translateX(-200vw);
 
     display: flex;
 }
@@ -179,6 +179,10 @@
 }
 
 @include tabletScreenDown {
+    .features {
+        margin-top: 10rem;
+    } 
+
     .slider__menu {
         width: min(80%, 35rem);
 
