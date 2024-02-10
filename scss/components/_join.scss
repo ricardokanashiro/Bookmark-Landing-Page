@@ -12,14 +12,16 @@
     h3 {
         font-weight: 400;
         letter-spacing: 1rem;
+        line-height: calc(1.8rem + .6vw);
         color: white;
         font-weight: 2rem;
         text-align: center;
+        font-size: calc(.8rem + .4vw);
     }
 
     h2 {
         color: white;
-        font-size: 3rem;
+        font-size: calc(2.8rem + .5vw);
         font-weight: 500;
         margin-top: 4rem;
         text-align: center;
@@ -35,7 +37,7 @@
 
 .join__contact-area {
     width: min(55rem, 90%);
-    margin-top: 4rem;
+    margin-top: 6rem;
 
     @include flex(center, stretch);
     gap: 1rem;
@@ -45,8 +47,7 @@
         background-color: $softRed;
         border: 0.25rem solid $softRed;
         flex-grow: 1;
-        // max-width: 12rem;
-        
+        flex-shrink: 0;
     }
 
     button:hover {
