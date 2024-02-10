@@ -525,6 +525,7 @@ header img {
 }
 .question-card__question h3 {
   font-size: 1.7rem;
+  font-size: calc(1.39rem + 0.25vw);
   font-weight: 400;
 }
 .question-card__question button {
@@ -533,14 +534,17 @@ header img {
   display: flex;
   justify-content: center;
   align-items: center;
+  cursor: pointer;
+}
+.question-card__question button img {
+  width: 1.6rem;
 }
 
 .question-card__answer {
   margin-top: 3rem;
-  font-size: 1.4rem;
+  font-size: calc(1rem + 0.3vw);
   color: hsl(229, 31%, 21%);
   line-height: 3rem;
-  display: none;
 }
 
 * {
