@@ -545,6 +545,82 @@ header img {
   font-size: calc(1rem + 0.3vw);
   color: hsl(229, 31%, 21%);
   line-height: 3rem;
+  display: none;
+}
+
+.join {
+  width: 100%;
+  background-color: hsl(231, 69%, 60%);
+  margin-top: 12rem;
+  padding: 8rem 3rem;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-flow: column nowrap;
+}
+.join h3 {
+  font-weight: 400;
+  letter-spacing: 1rem;
+  color: white;
+  font-weight: 2rem;
+  text-align: center;
+}
+.join h2 {
+  color: white;
+  font-size: 3rem;
+  font-weight: 500;
+  margin-top: 4rem;
+  text-align: center;
+}
+
+.join__content-area {
+  width: min(55rem, 90%);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-flow: column nowrap;
+}
+
+.join__contact-area {
+  width: min(55rem, 90%);
+  margin-top: 4rem;
+  display: flex;
+  justify-content: center;
+  align-items: stretch;
+  gap: 1rem;
+  flex-wrap: wrap;
+}
+.join__contact-area button {
+  background-color: hsl(0, 94%, 66%);
+  border: 0.25rem solid hsl(0, 94%, 66%);
+  flex-grow: 1;
+}
+.join__contact-area button:hover {
+  color: hsl(0, 94%, 66%);
+  background-color: white;
+}
+
+.contact-area__input-wrapper {
+  position: relative;
+  flex-grow: 2;
+  min-width: 70%;
+  flex-shrink: 0;
+}
+.contact-area__input-wrapper input {
+  padding: 1rem;
+  border-radius: 0.4rem;
+  padding: 1.6rem 5rem 1.6rem 1rem;
+  height: 100%;
+  width: 100%;
+  outline: none;
+  font-size: calc(0.9rem + 0.4vw);
+}
+.contact-area__input-wrapper img {
+  height: 2rem;
+  position: absolute;
+  top: 1.2rem;
+  right: 1.2rem;
+  display: none;
 }
 
 * {
