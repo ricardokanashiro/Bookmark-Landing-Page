@@ -63,6 +63,29 @@
   background-color: hsl(231, 69%, 60%);
 }
 
+@media (max-width: 700px) {
+  .introduction {
+    flex-direction: column-reverse;
+    padding: 0;
+    margin-top: 5rem;
+  }
+  .introduction__content {
+    width: 100%;
+    padding: 0 calc(0.5rem + 3vw);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-flow: column nowrap;
+  }
+  .introduction__content h1, .introduction__content p {
+    text-align: center;
+  }
+  .introduction__illustration {
+    width: 100%;
+    margin-bottom: 12rem;
+    padding: 0 0 0 calc(1.5rem + 4vw);
+  }
+}
 header {
   padding: 4rem 10vw;
   display: flex;
@@ -285,7 +308,7 @@ a {
   cursor: pointer;
   border: 0.25rem solid hsl(231, 69%, 60%);
   font-weight: 500;
-  font-size: 1.4rem;
+  font-size: calc(0.9rem + 0.4vw);
   transition-property: color, background-color;
   transition-duration: 300ms;
 }

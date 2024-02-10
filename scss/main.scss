@@ -41,7 +41,7 @@ a {
     cursor: pointer;
     border: .25rem solid $softBlue;
     font-weight: 500;
-    font-size: 1.4rem;
+    font-size: calc(.9rem + .4vw);
 
     transition-property: color, background-color;
     transition-duration: 300ms;

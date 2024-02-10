@@ -71,3 +71,29 @@
         background-color: $softBlue;
     }
 }
+
+@include tabletScreenDown {
+    .introduction {
+        flex-direction: column-reverse;
+        padding: 0;
+        margin-top: 5rem;
+    }
+
+    .introduction__content {
+        width: 100%;
+        padding: 0 calc(.5rem + 3vw);
+
+        @include flex(center, center);
+        flex-flow: column nowrap;
+
+        h1, p {
+            text-align: center;
+        }
+    }
+
+    .introduction__illustration {
+        width: 100%;
+        margin-bottom: 12rem;
+        padding: 0 0 0 calc(1.5rem + 4vw);
+    }
+}
