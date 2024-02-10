@@ -34,7 +34,7 @@
 
     @include flex(center, center);
     flex-flow: column nowrap;
-    overflow-x: hidden;;
+    overflow-x: hidden;
 }
 
 .slider__menu {
@@ -47,7 +47,7 @@
         color: black;
 
         background-color: transparent;
-        width: calc(15rem + 8vw);
+        width: calc(8rem + 11vw);
         padding: 2rem 0;
         cursor: pointer;
 
@@ -81,7 +81,7 @@
     padding: 0 $horizontalPadding;
 
     @include flex(space-between, center);
-    gap: 10rem;
+    gap: calc(3.5rem + 5vw);
 }
 
 .slide__illustration {
@@ -140,5 +140,49 @@
 
     button {
         margin-top: 3rem;
+    }
+}
+
+@include tabletScreenDown {
+    .slider__menu {
+        width: min(80%, 35rem);
+
+        @include flex(center, center);
+        flex-flow: column nowrap;
+
+        button {
+            width: 100%;
+        }
+    }
+
+    .slider__slides {
+        margin-top: calc(4rem + 5vw);
+    }
+
+    .slides__slide {
+        flex-direction: column;
+        justify-content: normal;
+        gap: 0rem;
+        padding: 0;
+    }
+
+    .slide__illustration {
+        width: 80%;
+        margin-bottom: calc(10rem + 5vw)
+    }
+
+    .slide__content {
+        h3 {
+            text-align: center;
+        }
+
+        p {
+            text-align: center;
+            padding: 0 2.5rem;
+        }
+
+        button {
+            display: none;
+        }
     }
 }
