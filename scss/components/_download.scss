@@ -27,6 +27,7 @@
 
 .download__browsers-wrapper {
     margin-top: 7rem;
+    padding: 0 3rem;
 
     @include flex(center, center);
     gap: 3rem;
@@ -35,6 +36,7 @@
 .browsers-wrapper__browser-card {
     @include flex(center, center);
     flex-flow: column nowrap;
+    min-width: 18rem;
 
     box-shadow: 0 0 10px .5px rgba(0, 0, 0, 0.1);
     border-radius: .8rem;
@@ -50,6 +52,7 @@
 
 .browser-card__browser-content {
     padding: 5rem 2rem 3rem 2rem;
+    width: 100%;
 
     @include flex(center, center);
     flex-flow: column nowrap;
@@ -62,12 +65,14 @@
         font-size: 1.8rem;
         font-weight: 500;
         margin-top: 3rem;
+        text-align: center;
     }
 
     p {
         color: $grayishBlue;
         font-size: 1.3rem;
         margin-top: 1.2rem;
+        text-align: center;
     }
 
     img {
@@ -99,8 +104,22 @@
     padding: 2rem;
     position: relative;
     margin-top: 1rem;
+    width: 100%;
+
+    @include flex(center, center);
 
     button {
         padding: 1.2rem 3rem;
+    }
+}
+
+@include tabletScreenDown {
+    .download__browsers-wrapper {
+        flex-wrap: wrap;
+    }
+
+    .browsers-wrapper__browser-card {
+        margin: 0 !important;
+        flex-grow: 1;
     }
 }

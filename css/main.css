@@ -367,6 +367,7 @@ header img {
 
 .download__browsers-wrapper {
   margin-top: 7rem;
+  padding: 0 3rem;
   display: flex;
   justify-content: center;
   align-items: center;
@@ -378,6 +379,7 @@ header img {
   justify-content: center;
   align-items: center;
   flex-flow: column nowrap;
+  min-width: 18rem;
   box-shadow: 0 0 10px 0.5px rgba(0, 0, 0, 0.1);
   border-radius: 0.8rem;
 }
@@ -392,6 +394,7 @@ header img {
 
 .browser-card__browser-content {
   padding: 5rem 2rem 3rem 2rem;
+  width: 100%;
   display: flex;
   justify-content: center;
   align-items: center;
@@ -404,11 +407,13 @@ header img {
   font-size: 1.8rem;
   font-weight: 500;
   margin-top: 3rem;
+  text-align: center;
 }
 .browser-card__browser-content p {
   color: hsl(229, 8%, 60%);
   font-size: 1.3rem;
   margin-top: 1.2rem;
+  text-align: center;
 }
 .browser-card__browser-content img {
   width: 7rem;
@@ -437,11 +442,24 @@ header img {
   padding: 2rem;
   position: relative;
   margin-top: 1rem;
+  width: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
 }
 .browser-card__browser-download-btn button {
   padding: 1.2rem 3rem;
 }
 
+@media (max-width: 700px) {
+  .download__browsers-wrapper {
+    flex-wrap: wrap;
+  }
+  .browsers-wrapper__browser-card {
+    margin: 0 !important;
+    flex-grow: 1;
+  }
+}
 * {
   padding: 0;
   margin: 0;
