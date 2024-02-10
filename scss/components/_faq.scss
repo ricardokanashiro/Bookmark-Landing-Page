@@ -1,0 +1,83 @@
+@use '../utils/index' as *;
+
+.faq {
+    @include flex(center, center);
+    flex-flow: column nowrap;
+    margin-top: 12rem;
+
+    .primary-button {
+        margin-top: 7rem;
+    }
+}
+
+.faq__introduction-text {
+    width: min(50rem, 90%);
+
+    @include flex(center, center);
+    flex-flow: column nowrap;
+
+    h2 {
+        text-align: center;
+        font-size: calc(1.8rem + 1.1vw);
+        font-weight: 500;
+    }
+
+    p {
+        width: min(50rem, 80%);
+        margin-top: calc(.6rem + 1.5vw);
+
+        text-align: center;
+        font-size: calc(1rem + .4vw);
+        line-height: calc(1.5rem + .9vw);
+        color: $grayishBlue;
+    }
+}
+
+.faq__questions-wrapper {
+    width: min(60rem, 90%);
+    margin-top: 7rem;
+
+    @include flex(center, center);
+    flex-flow: column nowrap;
+}
+
+.questions-wrapper__question-card {
+    border-bottom: 1px solid hsla(229, 8%, 60%, 0.4);
+    padding: 2rem 0;
+    width: 100%;
+    cursor: pointer;
+}
+
+.questions-wrapper__question-card:hover h3 {
+    color: $softRed;
+}
+
+.questions-wrapper__question-card:nth-child(1) {
+    border-top: 1px solid hsla(229, 8%, 60%, 0.4);
+}
+
+.question-card__question {
+    width: 100%;
+
+    @include flex(space-between, center);
+    gap: 3rem;
+
+    h3 {
+        font-size: 1.7rem;
+        font-weight: 400;
+    }
+
+    button {
+        background-color: transparent;
+        margin-right: 1.5rem;
+        @include flex(center, center);
+    }
+}
+
+.question-card__answer {
+    margin-top: 3rem;
+    font-size: 1.4rem;
+    color: $veryDarkBlue;
+    line-height: 3rem;
+    display: none;
+}
