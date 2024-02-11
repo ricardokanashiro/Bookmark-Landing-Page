@@ -12,12 +12,12 @@
 
 html {
     font-size: 62.5%;
+    scroll-behavior: smooth;
 }
 
 body {
     width: 100%;
     min-height: 100vh;
-    // position: relative;
 
     display: flex;
     flex-flow: column nowrap;
@@ -60,4 +60,34 @@ a {
     background-color: transparent;
     border: .25rem solid $grayishBlue;
     color: $veryDarkBlue; 
+}
+
+.floating-button {
+    position: fixed;
+    bottom: calc(3rem + 3vw);
+    right: calc(3rem + 3vw);
+    z-index: 3;
+
+    width: clamp(4rem, 4rem + 2.2vw, 6rem);
+    height: clamp(4rem, 4rem + 2.2vw, 6rem);
+    background-color: $softRed;
+    border-radius: 50%;
+    box-shadow: rgba(50, 50, 93, 0.25) 0px 13px 27px -5px, rgba(0, 0, 0, 0.3) 0px 8px 16px -8px;
+    cursor: pointer;
+
+    display: none;
+    justify-content: center;
+    align-items: center;
+
+    img {
+        width: 3rem;
+        transition-property: margin-bottom;
+        transition-duration: 800ms;
+    }
+}
+
+.floating-button:hover {
+    img {
+        margin-bottom: 1rem;
+    }
 }
