@@ -13,23 +13,39 @@ header img {
 
 .header__menu {
     display: flex;
+    align-items: center;
     gap: clamp(.4rem, .4vw, 1rem);
 }
 
 .menu__item {
     font-size: clamp(.8rem, .6rem + .5vw, 1.5rem);
     width: clamp(8rem, 9vw ,12rem);
-    padding: 1.2rem 0;
+    padding: 1.1rem 0;
     text-align: center;
     color: $grayishBlue;
+
+    transition-property: color, background-color;
+    transition-duration: 300ms;
+}
+
+a.menu__item:hover {
+    color: $softRed;
 }
 
 .menu__item--btn {
     background-color: $softRed;
+    border: .3rem solid $softRed;
     color: white;
     border-radius: .5rem;
     margin-left: 1.5rem;
     cursor: pointer;
+    transition-property: color, background-color;
+    transition-duration: 300ms;
+}
+
+.menu__item--btn:hover {
+    background-color: transparent;
+    color: $softRed;
 }
 
 .header__hamburger-btn {

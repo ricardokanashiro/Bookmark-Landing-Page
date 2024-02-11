@@ -100,23 +100,38 @@ header img {
 
 .header__menu {
   display: flex;
+  align-items: center;
   gap: clamp(0.4rem, 0.4vw, 1rem);
 }
 
 .menu__item {
   font-size: clamp(0.8rem, 0.6rem + 0.5vw, 1.5rem);
   width: clamp(8rem, 9vw, 12rem);
-  padding: 1.2rem 0;
+  padding: 1.1rem 0;
   text-align: center;
   color: hsl(229, 8%, 60%);
+  transition-property: color, background-color;
+  transition-duration: 300ms;
+}
+
+a.menu__item:hover {
+  color: hsl(0, 94%, 66%);
 }
 
 .menu__item--btn {
   background-color: hsl(0, 94%, 66%);
+  border: 0.3rem solid hsl(0, 94%, 66%);
   color: white;
   border-radius: 0.5rem;
   margin-left: 1.5rem;
   cursor: pointer;
+  transition-property: color, background-color;
+  transition-duration: 300ms;
+}
+
+.menu__item--btn:hover {
+  background-color: transparent;
+  color: hsl(0, 94%, 66%);
 }
 
 .header__hamburger-btn {
