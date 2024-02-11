@@ -13,14 +13,16 @@ footer {
     padding: 5rem 0;
 
     @include flex(space-between, center);
+    gap: 5rem;
 }
 
 .links-social-wrapper__link-wrapper {
-    @include flex(center, center);
+    @include flex(flex-start, center);
+    flex-wrap: wrap;
     gap: 8rem;
 
     img {
-        height: 3rem;
+        height: calc(2rem + .7vw);
     }
 }
 
@@ -30,7 +32,7 @@ footer {
 
     a {
         color: white;
-        font-size: 1.3rem;
+        font-size: calc(1rem + .2vw);
         letter-spacing: .3rem;
     }
 }
@@ -54,5 +56,21 @@ footer {
     a {
         text-decoration: underline; 
         color: $softBlue;
+    }
+}
+
+@include tabletScreenDown {
+    .footer__links-social-wrapper {
+        flex-direction: column;
+        gap: 8rem;
+    }
+
+    .links-social-wrapper__link-wrapper {
+        gap: 4rem;
+        flex-direction: column;
+    }
+
+    .link-wrapper__links {
+        flex-direction: column;
     }
 }
