@@ -2,13 +2,15 @@
 
 header {
     padding: 4rem $horizontalPadding;
+    position: relative;
 
     @include flex(space-between, center);
 }
 
 header img {
-    width: clamp(12rem, 7rem + 6vw, 17rem);
+    width: clamp(10rem, 10rem + 6vw, 17rem);
     font-size: 1vw;
+    z-index: 3;
 }
 
 .header__menu {
@@ -51,24 +53,112 @@ a.menu__item:hover {
 .header__hamburger-btn {
     cursor: pointer;
 
+    width: 3rem;
     display: none;
     flex-flow: column nowrap;
     gap: .4rem;
+
+    @include flex(center, center);
 }
 
 .hamburger-btn__row {
-    width: 3rem;
+    width: 100%;
     height: .4rem;
     background-color: black;
     border-radius: .2rem;
 }
 
 @include tabletScreenDown {
+    .modal-blur {
+        display: none;
+        background-color: hsla(229, 31%, 21%, 0.85);
+        position: absolute;
+        top: 0;
+        left: 0;
+        width: 100%;
+        height: 100dvh;
+        z-index: 2;
+    }
+
     .header__menu {
         display: none;
+        position: absolute;
+        top: 10.5rem;
+        right: 0;
+        z-index: 3;
+
+        width: 100%;
+
+        justify-content: flex-start;
+        align-items: center;
+        flex-flow: column nowrap;
+    }
+
+    .menu__item--btn {
+        margin-left: 0;
+        background-color: transparent;
+        border: 0.3rem solid white;
+        border-bottom: 0.3rem solid white !important;
+        margin-top: 2rem;
+    }
+
+    .menu__item {
+        width: 80%;
+        font-size: calc(1rem + 2.4vw);
+        color: white;
+        border-bottom: 1.2px solid $grayishBlue;
+    } 
+
+    .menu__item:nth-child(1) {
+        border-top: 1.2px solid $grayishBlue;
+    }
+
+    a.menu__item {
+        padding: 2rem 0;
+    }
+
+    a.menu__item:hover, .menu__item:hover {
+        color: white;
     }
 
     .header__hamburger-btn {
         @include flex(center, center);
+        z-index: 3;
+        background-color: transparent;
+    }
+
+    .header__hamburger-btn--active {
+        position: relative;
+
+        .hamburger-btn__row:nth-child(1) {
+            transform: rotate(225deg);
+        }
+
+        .hamburger-btn__row:nth-child(2) {
+            display: none;
+        }
+
+        .hamburger-btn__row:nth-child(3) {
+            transform: rotate(-225deg);
+        }
+
+        .hamburger-btn__row {
+            position: absolute;
+            transition-property: transform;
+            transition-duration: 500ms;
+        }
+    }
+
+    .header__menu--active {
+        display: flex;
+    }
+
+    .modal-blur--active {
+        display: block;
+    }
+
+    .body--active {
+        height: 100vh;
+        overflow: hidden;
     }
 }
