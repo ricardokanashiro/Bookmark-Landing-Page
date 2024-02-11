@@ -136,6 +136,10 @@ a.menu__item:hover {
   color: hsl(0, 94%, 66%);
 }
 
+.menu__social-wrapper {
+  display: none;
+}
+
 .header__hamburger-btn {
   cursor: pointer;
   width: 3rem;
@@ -195,6 +199,18 @@ a.menu__item:hover {
   }
   a.menu__item:hover, .menu__item:hover {
     color: white;
+  }
+  .menu__social-wrapper {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 4rem;
+    margin-top: 25rem;
+  }
+  .menu__social-wrapper img {
+    height: 2.8rem;
+    width: auto;
+    cursor: pointer;
   }
   .header__hamburger-btn {
     display: flex;

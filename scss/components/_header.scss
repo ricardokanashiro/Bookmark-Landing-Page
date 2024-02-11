@@ -50,6 +50,10 @@ a.menu__item:hover {
     color: $softRed;
 }
 
+.menu__social-wrapper {
+    display: none;
+}
+
 .header__hamburger-btn {
     cursor: pointer;
 
@@ -118,6 +122,19 @@ a.menu__item:hover {
 
     a.menu__item:hover, .menu__item:hover {
         color: white;
+    }
+
+    .menu__social-wrapper {
+        @include flex(center, center);
+        gap: 4rem;
+    
+        margin-top: 25rem;
+    
+        img {
+            height: 2.8rem;
+            width: auto;
+            cursor: pointer;
+        }
     }
 
     .header__hamburger-btn {
