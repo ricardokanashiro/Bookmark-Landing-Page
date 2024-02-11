@@ -57,8 +57,7 @@ a.menu__item:hover {
     display: none;
     flex-flow: column nowrap;
     gap: .4rem;
-
-    @include flex(center, center);
+    display: none;
 }
 
 .hamburger-btn__row {

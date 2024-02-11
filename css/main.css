@@ -142,9 +142,7 @@ a.menu__item:hover {
   display: none;
   flex-flow: column nowrap;
   gap: 0.4rem;
-  display: flex;
-  justify-content: center;
-  align-items: center;
+  display: none;
 }
 
 .hamburger-btn__row {
@@ -621,17 +619,30 @@ a.menu__item:hover {
   justify-content: center;
   align-items: center;
   cursor: pointer;
+  transition-property: transform;
+  transition-duration: 500ms;
 }
 .question-card__question button img {
   width: 1.6rem;
 }
+.question-card__question .question__arrow--active {
+  transform: rotate(180deg);
+}
 
 .question-card__answer {
-  margin-top: 3rem;
   font-size: calc(1rem + 0.3vw);
   color: hsl(229, 31%, 21%);
   line-height: 3rem;
-  display: none;
+  max-height: 0;
+  overflow: hidden;
+  transition-property: margin, max-height;
+  transition-duration: 500ms;
+}
+
+.question-card__answer--active {
+  display: block;
+  max-height: 10rem;
+  margin-top: 3rem;
 }
 
 .join {

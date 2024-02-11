@@ -74,16 +74,32 @@
         @include flex(center, center);
         cursor: pointer;
 
+        transition-property: transform;
+        transition-duration: 500ms;
+
         img {
             width: 1.6rem;
         }
     }
+
+    .question__arrow--active {
+        transform: rotate(180deg);
+    }
 }
 
 .question-card__answer {
-    margin-top: 3rem;
     font-size: calc(1rem + .3vw);
     color: $veryDarkBlue;
     line-height: 3rem;
-    display: none;
+    max-height: 0;
+    overflow: hidden;
+
+    transition-property: margin, max-height;
+    transition-duration: 500ms;
+}
+
+.question-card__answer--active {
+    display: block;
+    max-height: 10rem;
+    margin-top: 3rem;
 }
