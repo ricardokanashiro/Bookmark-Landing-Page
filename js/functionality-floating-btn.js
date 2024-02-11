@@ -2,10 +2,12 @@ const floatingBtn = document.querySelector('.floating-button');
 
 function showFloatingBtn() {
     if(document.documentElement.scrollTop > 250) {
-        floatingBtn.style.display = 'flex';
+        floatingBtn.style.visibility = 'visible';
+        floatingBtn.style.opacity = '1';
     }
     else if(document.documentElement.scrollTop < 250) {
-        floatingBtn.style.display = 'none';
+        floatingBtn.style.visibility = 'hidden';
+        floatingBtn.style.opacity = '0';
     }
 }
 

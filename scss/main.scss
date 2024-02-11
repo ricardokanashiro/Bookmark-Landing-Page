@@ -75,9 +75,12 @@ a {
     box-shadow: rgba(50, 50, 93, 0.25) 0px 13px 27px -5px, rgba(0, 0, 0, 0.3) 0px 8px 16px -8px;
     cursor: pointer;
 
-    display: none;
-    justify-content: center;
-    align-items: center;
+    @include flex(center, center);
+    visibility: hidden;
+    opacity: 0;
+
+    transition-property: opacity, visibility;
+    transition-duration: 250ms;
 
     img {
         width: 3rem;
