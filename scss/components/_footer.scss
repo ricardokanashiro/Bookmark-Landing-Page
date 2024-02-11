@@ -1,0 +1,58 @@
+@use '../utils/index' as *;
+
+footer {
+    width: 100%;
+    background-color: $veryDarkBlue;
+
+    @include flex(center, center);
+    flex-direction: column;
+}
+
+.footer__links-social-wrapper {
+    width: 85%;
+    padding: 5rem 0;
+
+    @include flex(space-between, center);
+}
+
+.links-social-wrapper__link-wrapper {
+    @include flex(center, center);
+    gap: 8rem;
+
+    img {
+        height: 3rem;
+    }
+}
+
+.link-wrapper__links {
+    @include flex(center, center);
+    gap: 4rem;
+
+    a {
+        color: white;
+        font-size: 1.3rem;
+        letter-spacing: .3rem;
+    }
+}
+
+.links-social-wrapper__social-wrapper {
+    @include flex(center, center);
+    gap: 4rem;
+
+    img {
+        height: 2.4rem;
+    }
+}
+
+.footer__attribution {
+    width: 100%;
+    text-align: center;
+    padding: 2rem;
+    color: rgb(225, 225, 236);
+    font-size: calc(1rem + .2vw);
+
+    a {
+        text-decoration: underline; 
+        color: $softBlue;
+    }
+}
