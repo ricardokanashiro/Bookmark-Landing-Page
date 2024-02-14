@@ -34,7 +34,7 @@ Os usuários devem ser capazes de:
 </a>
 
 - <p>Page Live:</p>
-<a href="https://www.frontendmentor.io/solutions/tip-calculator-html-scss-vanilla-js-5XrKpCnNis">
+<a href="https://ricardokanashiro.github.io/Bookmark-Landing-Page/">
     <img src="https://img.shields.io/badge/Github_Pages-000?style=for-the-badge&logo=github" />
 </a>
 
